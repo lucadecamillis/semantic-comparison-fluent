@@ -1,18 +1,15 @@
 namespace SemanticComparison.Fluent.Tests.TestTypes
 {
-	public class MissingProperty
+	public class CustomType
 	{
 		public int Id { get; }
 
 		public string Name { get; }
 
-		public int Missing { get; }
-
-		public MissingProperty(int id, string name, int missing)
+		public CustomType(int id, string name)
 		{
 			this.Id = id;
 			this.Name = name;
-			this.Missing = missing;
 		}
 	}
 }
