@@ -22,8 +22,8 @@ jobs:
       with:
         dotnet-version: 5.0.x
     - name: Restore dependencies
-      run: dotnet restore "${{SRC}}"
+      run: dotnet restore ${{env.SRC}}
     - name: Build
-      run: dotnet build --no-restore "${{SRC}}"
+      run: dotnet build --no-restore ${{env.SRC}}
     - name: Test
       run: dotnet test --no-build --verbosity normal "${{TEST}}"
