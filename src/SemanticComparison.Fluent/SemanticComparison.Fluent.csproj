@@ -1,6 +1,21 @@
 <Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
+    <Description>Fluent extensions for SemanticComparison</Description>
+    <AssemblyTitle>SemanticComparison.Fluent</AssemblyTitle>
     <TargetFrameworks>netstandard2.0;net452</TargetFrameworks>
+    <Authors>Luca De Camillis</Authors>
+    <PackageId>SemanticComparison.Fluent</PackageId>
+    <PackageTags>extension-methods;fluent;semantic-comparison-lib</PackageTags>
+    <PackageDescription>Fluent extensions for SemanticComparison</PackageDescription>
+    <PackageProjectUrl>https://github.com/lucadecamillis/semantic-comparison-fluent</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/lucadecamillis/semantic-comparison-fluent</RepositoryUrl>
+    <Version>0.1.0</Version>
+
+    <PublishRepositoryUrl>true</PublishRepositoryUrl>
+    <DebugSymbols>true</DebugSymbols>
+    <IncludeSymbols>true</IncludeSymbols>
+    <SymbolPackageFormat>snupkg</SymbolPackageFormat>
+    <IsPackable>true</IsPackable>
   </PropertyGroup>
 
   <ItemGroup>

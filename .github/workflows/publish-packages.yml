@@ -1,0 +1,27 @@
+name: Publish Packages
+
+on:
+  push:
+    branches: [ main ]
+
+env:
+    SRC: "src/SemanticComparison.Fluent"
+    PACKAGE_SOURCE: "https://api.nuget.org/v3/index.json"
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+
+    - name: Setup .NET
+      uses: actions/setup-dotnet@v1
+      with:
+        dotnet-version: 5.0.x
+    
+    - name: Build solution and generate NuGet package
+      run: dotnet pack ${{env.SRC}} -c Release -o out
+
+    - name: Push generated package to GitHub registry
+      run: dotnet nuget push out/*.nupkg -k ${{secrets.NUGET_API_KEY}} -s ${{env.PACKAGE_SOURCE}} --skip-duplicate -n true
