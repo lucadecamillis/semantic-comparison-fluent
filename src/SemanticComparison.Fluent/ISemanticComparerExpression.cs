@@ -17,13 +17,22 @@ namespace SemanticComparison.Fluent
 			Expression<Func<T, TProperty>> propertyLambda);
 
 		/// <summary>
-		/// Provide custom delegate for comparison for a specific property
+		/// Provide custom delegate for comparison of properties of a given type
 		/// </summary>
 		/// <typeparam name="TProperty"></typeparam>
 		/// <param name="delegate"></param>
 		/// <returns></returns>
 		ISemanticComparerExpression<T> ForType<TProperty>(
 			Func<TProperty, TProperty, bool> @delegate);
+
+		/// <summary>
+		/// Provide custom equality comparare for comparison of properties of a given type
+		/// </summary>
+		/// <typeparam name="TProperty"></typeparam>
+		/// <param name="comparer"></param>
+		/// <returns></returns>
+		ISemanticComparerExpression<T> ForType<TProperty>(
+			IEqualityComparer<TProperty> comparer);
 
 		/// <summary>
 		/// Compare collections with default equality comparer

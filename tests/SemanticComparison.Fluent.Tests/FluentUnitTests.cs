@@ -35,7 +35,7 @@ namespace SemanticComparison.Fluent.Tests
 
 			var sut = SemanticComparison.Fluent.FluentExtensions
 				.ConfigureSemanticComparer<ClassWithCustomType>()
-				.ForType<CustomType>((e1, e2) => customTypeEquality.Equals(e1, e2))
+				.ForType<CustomType>(customTypeEquality)
 				.Create();
 
 			Assert.True(sut.Equals(c1, c2));

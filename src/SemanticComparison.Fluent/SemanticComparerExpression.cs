@@ -37,6 +37,14 @@ namespace SemanticComparison.Fluent
 			return this;
 		}
 
+		public ISemanticComparerExpression<T> ForType<TProperty>(
+			IEqualityComparer<TProperty> comparer)
+		{
+			this.memberComparers.Add(new MemberTypeComparer<TProperty>(comparer.Equals));
+
+			return this;
+		}
+
 		public ISemanticComparerExpression<T> ForCollection<TProperty>(
 			Expression<Func<T, IEnumerable<TProperty>>> propertyLambda)
 		{
