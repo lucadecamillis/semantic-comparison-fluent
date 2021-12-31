@@ -1,1 +1,1 @@
-# semantic-comparison-fluent
+# SemanticComparison.Fluent [![CI](https://github.com/lucadecamillis/semantic-comparison-fluent/actions/workflows/ci.yml/badge.svg)](https://github.com/lucadecamillis/semantic-comparison-fluent/actions/workflows/ci.yml)
