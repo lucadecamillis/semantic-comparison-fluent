@@ -26,4 +26,4 @@ jobs:
     - name: Build
       run: dotnet build --no-restore ${{env.SRC}}
     - name: Test
-      run: dotnet test --no-build --verbosity normal "${{TEST}}"
+      run: dotnet test --no-build --verbosity normal ${{env.TEST}}
